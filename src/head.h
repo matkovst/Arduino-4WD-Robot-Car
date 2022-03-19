@@ -13,7 +13,7 @@ public:
 
     ~Head()
     {
-	    m_servo.detach();
+        m_servo.detach();
     }
   
     void setup(uint8_t usonicTrigPin, uint8_t usonicEchoPin, int servoPin)
@@ -34,7 +34,7 @@ public:
         if (!servoOk)
         {
             resCode = 1;
-        resMsg += "Head servo failed";
+            resMsg += "Head servo failed";
         }
         
         /* Check Ultrasonic */
@@ -42,7 +42,7 @@ public:
         if (!usonicOk)
         {
             resCode = 1;
-        resMsg += ", Head ultrasonic failed";
+            resMsg += ", Head ultrasonic failed";
         }
         
         return {resCode, resMsg};
